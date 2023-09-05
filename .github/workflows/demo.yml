@@ -30,14 +30,14 @@ jobs:
     - name: Deploy backend to Azure Functions
       uses: azure/functions-action@v1
       with:
-        app-name: <YOUR_AZURE_FUNCTIONS_APP_NAME>
+        app-name: demo
         package: api
         publish-profile: ${{ secrets.AZURE_FUNCTIONS_PUBLISH_PROFILE }}
 
     - name: Deploy bot to Azure App Service
       uses: azure/webapps-deploy@v2
       with:
-        app-name: <YOUR_AZURE_APP_SERVICE_NAME>
+        app-name: demo
         publish-profile: ${{ secrets.AZURE_APP_SERVICE_PUBLISH_PROFILE }}
         package: bot
       
